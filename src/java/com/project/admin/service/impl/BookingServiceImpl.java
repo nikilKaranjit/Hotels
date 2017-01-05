@@ -65,4 +65,9 @@ public class BookingServiceImpl implements BookingService {
         return bookingDAO.getByUser(username);
     }
 
+    @Override
+    public List<Booking> getLast(int bId) throws SQLException {
+        return bookingDAO.getLast(bId);
+    }
+
 }

@@ -51,7 +51,7 @@ public class SQLConstant {
     public final static String BOOKING_INSERTCLIENT = " INSERT INTO " + TableConstant.TABLE_BOOKING
             + "(first_name,last_name,ro_id,room_number,room_price,room_type,checkin_date,total_nights,checkout_date,total_price,c_id,username,pdf,status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
     public final static String BOOKING_GETBYUSER= " SELECT * FROM  " + TableConstant.TABLE_BOOKING + " WHERE username = ? " ;
-    public final static String BOOKING_GETLAST= "SELECT * FROM " + TableConstant.TABLE_BOOKING + " ORDER BY b_id=? desc limit 5 ";
+    public final static String BOOKING_GETLAST= " SELECT * FROM " + TableConstant.TABLE_BOOKING + " ORDER BY b_id=? DESC LIMIT  5 ";
     
     
     

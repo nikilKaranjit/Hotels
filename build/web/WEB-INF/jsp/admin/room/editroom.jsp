@@ -37,6 +37,7 @@ response.sendRedirect("login.jsp");
     <input type="text" value="${Room.ro_id}" name="id"/>
     <div class="form-group"> 
     <button type="submit" class="btn btn-success" value="editroom/ro_id" >Save</button>
+     <a href="${SITE_URL}/admin/room"class="btn btn-danger">Cancel</a>
     </div>
 </form>
 <%@include  file="../footer.jsp" %>

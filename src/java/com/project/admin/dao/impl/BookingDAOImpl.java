@@ -149,7 +149,13 @@ public class BookingDAOImpl implements BookingDAO {
 
     @Override
     public List<Booking> getLast(int bId) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return jdbcTemplate.query(SQLConstant.BOOKING_GETLAST, new Object[]{bId},new RowMapper<Booking>() {
+
+           @Override
+           public Booking mapRow(ResultSet rs, int i) throws SQLException {
+               return mapData(rs);
+           }
+       });
     }
   
     }

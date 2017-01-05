@@ -82,6 +82,7 @@ response.sendRedirect("login.jsp");
     <form:hidden path="bId" name="bId"/>
     <div class="form-group"> 
         <button type="submit" class="btn btn-success" >Save</button>
+        <a href="${SITE_URL}/admin/booking"class="btn btn-danger">Cancel</a>
     </div>
 </form:form>
 

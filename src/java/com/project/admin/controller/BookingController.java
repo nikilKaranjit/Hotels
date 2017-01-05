@@ -85,7 +85,12 @@ public class BookingController {
         return mv;
     }
       
-    
+      @RequestMapping(value = "/newbook/{bId}", method = RequestMethod.GET)
+    public ModelAndView newbooking(@PathVariable("bId") int bId) throws SQLException {
+        ModelAndView mv = new ModelAndView("admin/booking/newbooking/${Booking.bId}");
+        mv.addObject("Booking", bookingService.getLast(bId));
+        return mv;
+    }
     
 
     @RequestMapping(value = "/delete/{bId}", method = RequestMethod.GET)

@@ -28,6 +28,7 @@
     <!--<hidden path="commentsId"/>-->
     <div class="form-group"> 
     <form:button type="submit" class="btn btn-success" >Save</form:button>
+    <a href="${SITE_URL}/admin/comments"class="btn btn-danger">Cancel</a>
     </div>
 </form:form>
 s

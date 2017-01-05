@@ -45,6 +45,7 @@ response.sendRedirect("login.jsp");
     <form:hidden path="u_id"/>
     <div class="form-group"> 
     <button type="submit" class="btn btn-success" >Save</button>
+     <a href="${SITE_URL}/admin/users"class="btn btn-danger">Cancel</a>
     </div>
     <script>
       $.validator.setDefaults({

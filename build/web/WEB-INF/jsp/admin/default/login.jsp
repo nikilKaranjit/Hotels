@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../header.jsp" %>
+ <%@include file="../header.jsp" %>
      
     <body class="hold-transition login-page">
         <div class="login-box">

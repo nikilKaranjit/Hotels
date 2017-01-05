@@ -10,7 +10,7 @@ response.sendRedirect("login.jsp");
 welcome ${username}
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="${SITE_URL}/admin/booking/last/${booking.bId}">latest</a>
+  <a href="#">new bookings</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
