@@ -21,7 +21,7 @@ public interface BookingDAO {
     int delete (int bId) throws SQLException;
     Booking getById (int bId) throws SQLException; 
     int checkin(int bId) throws SQLException;
-    List <Booking> getLast(int bId) throws SQLException;
+    List <Booking> getLast() throws SQLException;
     List<Booking> getByUser(String username)throws SQLException;
     
     

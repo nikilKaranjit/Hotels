@@ -66,8 +66,8 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public List<Booking> getLast(int bId) throws SQLException {
-        return bookingDAO.getLast(bId);
+    public List<Booking> getLast() throws SQLException {
+        return bookingDAO.getLast();
     }
 
 }

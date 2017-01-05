@@ -148,8 +148,8 @@ public class BookingDAOImpl implements BookingDAO {
     }
 
     @Override
-    public List<Booking> getLast(int bId) throws SQLException {
-       return jdbcTemplate.query(SQLConstant.BOOKING_GETLAST, new Object[]{bId},new RowMapper<Booking>() {
+    public List<Booking> getLast() throws SQLException {
+       return jdbcTemplate.query(SQLConstant.BOOKING_GETLAST,new RowMapper<Booking>() {
 
            @Override
            public Booking mapRow(ResultSet rs, int i) throws SQLException {

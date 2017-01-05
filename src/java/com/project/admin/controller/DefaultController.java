@@ -5,6 +5,7 @@
  */
 package com.project.admin.controller;
 
+import com.project.admin.entity.Booking;
 import com.project.admin.entity.User;
 import com.project.admin.service.BookingService;
 import com.project.admin.service.UserService;
@@ -35,7 +36,6 @@ public class DefaultController {
     @RequestMapping( value = "/admin",method=RequestMethod.GET)
     public String login(ModelMap map){
         System.out.println("Hello");
-        
         return "admin/default/login";
     }
     
@@ -46,23 +46,30 @@ public class DefaultController {
         String username=req.getParameter("username");
         String password=req.getParameter("password");
         User user = userService.authenticate(username,password);
-        if(user==null){
+        if(user==null)
+        {
             return "admin/default/login";
         }
-        else {
+        else 
+        {
                 HttpSession session = req.getSession();
                 session.setAttribute("username",username);
-             if (user.getR_id()==1){
+              if (user.getR_id()==1)
+              {
               return "admin/dashboard/dashboard";
-             }
-             else{
+              
+              }
+             else
+              {
              
-           return "admin/dashboard/dashboarduser";
+              return "admin/dashboard/dashboarduser";
              }
                 
     }
         
     }
+      
+    
    
    
 }

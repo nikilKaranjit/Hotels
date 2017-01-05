@@ -22,7 +22,7 @@ public interface BookingService {
     Booking getById (int bId) throws SQLException; 
     int checkin(int bId) throws SQLException;
     List<Booking> getByUser(String username)throws SQLException;
-    List <Booking> getLast(int bId) throws SQLException;
+    List <Booking> getLast() throws SQLException;
     
   
     

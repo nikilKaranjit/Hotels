@@ -31,6 +31,7 @@
       <li><a href="${SITE_URL}/admin/users">Users</a></li>
       <li><a href="${SITE_URL}/admin/room">Room</a></li>
       <li><a href="${SITE_URL}/admin/booking">Booking</a></li>
+      <li><a href="${SITE_URL}/admin/customer">Customer</a></li>
       <li><a href="${SITE_URL}/admin/comments">Comments</a></li>
        <li><a href="${SITE_URL}/admin/checkin/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
