@@ -5,6 +5,7 @@
  */
 package com.project.admin.dao;
 
+import com.project.admin.entity.Booking;
 import com.project.admin.entity.Customer;
 
 import java.sql.SQLException;
@@ -22,6 +23,8 @@ public interface CustomerDAO {
     Customer getById (int c_id) throws SQLException; 
     Customer getByUsername(String username)throws SQLException;
     public Customer authenticate(String username,String password);
+      List <Customer> getLast() throws SQLException;
+    
     
     
 }

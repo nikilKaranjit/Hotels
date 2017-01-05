@@ -55,5 +55,10 @@ public class CustomerServiceImpl implements CustomerService{
     public Customer getByUsername(String username) throws SQLException {
         return customerDAO.getByUsername(username);
     }
+
+    @Override
+    public List<Customer> getLast() throws SQLException {
+        return customerDAO.getLast();
+    }
     
 }

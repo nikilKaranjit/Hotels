@@ -11,7 +11,7 @@ welcome ${username}
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="${SITE_URL}/admin/booking/new">new bookings</a>
-  <a href="#">Services</a>
+  <a href="${SITE_URL}/admin/customer/new">new Customer</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>

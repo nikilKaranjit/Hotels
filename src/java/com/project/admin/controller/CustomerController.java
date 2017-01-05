@@ -54,7 +54,12 @@ public class CustomerController {
         customerservice.delete(c_id);
         return  "redirect:/admin/customer";
     }
-     
+      @RequestMapping(value = "/new", method = RequestMethod.GET)
+    public ModelAndView newbooking() throws SQLException {
+        ModelAndView mv = new ModelAndView("admin/customer/newcustomer");
+        mv.addObject("Customer", customerservice.getLast());
+        return mv;
+    }
       
      @RequestMapping(value="/save",method=RequestMethod.POST)
      public String save(@ModelAttribute ("Customer")Customer customer) throws SQLException{

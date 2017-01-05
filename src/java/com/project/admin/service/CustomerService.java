@@ -22,5 +22,6 @@ public interface CustomerService {
     Customer getById (int c_id) throws SQLException; 
     public Customer authenticate(String username,String password);
      Customer getByUsername(String username)throws SQLException;
+       List <Customer> getLast() throws SQLException;
     
 }

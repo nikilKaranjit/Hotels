@@ -36,6 +36,7 @@ public class SQLConstant {
     public final static String CUSTOMER_GETBYID = " SELECT * FROM " + TableConstant.TABLE_CUSTOMER + " WHERE c_id = ? ";
     public final static String CUSTOMER_AUTHENTICATE = " SELECT * FROM " + TableConstant.TABLE_CUSTOMER + " WHERE username=? AND password=? ";
     public final static String CUSTOMER_GETBYUSER = " SELECT * FROM " + TableConstant.TABLE_CUSTOMER + " WHERE username=?  ";
+    public final static String CUSTOMER_GETLAST= " SELECT * FROM " + TableConstant.TABLE_CUSTOMER + " ORDER BY c_id DESC LIMIT  5 ";
 
     
     //Booking

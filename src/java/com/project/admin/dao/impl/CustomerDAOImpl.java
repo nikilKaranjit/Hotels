@@ -140,6 +140,17 @@ public class CustomerDAOImpl implements CustomerDAO {
             }
         });
     }
+
+    @Override
+    public List<Customer> getLast() throws SQLException {
+        return jdbcTemplate.query(SQLConstant.CUSTOMER_GETLAST, new RowMapper<Customer>() {
+
+            @Override
+            public Customer mapRow(ResultSet rs, int i) throws SQLException {
+                return mapData(rs);
+            }
+        });
+    }
     }
     
  
