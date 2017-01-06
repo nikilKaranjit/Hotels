@@ -1,5 +1,5 @@
 <%@include file="../header.jsp" %>
-        <h1>Checkin</h1>
+        <h1>Checkout</h1>
         <div class="pull-right">
                 
         </div>
@@ -28,14 +28,7 @@
                 <td>${checkout.getCheckin().getBooking.getCheckoutDate()}</td>
                 <td>${checkout.getCheckin().getBooking().getTotalPrice()}</td>
                 <td>
-                   </a>
-                    <a href="${SITE_URL}/admin/checkin/checkout"  class="btn btn-success" onclick=" return confirm('Are you sure to checkout')">
-                        <span class="glyphicon glyphicon-home"></span>
-                    </a>
-                    <a href="${SITE_URL}/admin/booking/delete/${booking.bId}" class="btn btn-danger"  onclick=" return confirm('Are you sure to Delete')">
-                        <span class="glyphicon glyphicon-trash">Delete</span>
-                    </a>
-                        
+                   
                 </td>
                 </tr>
                 </c:forEach>

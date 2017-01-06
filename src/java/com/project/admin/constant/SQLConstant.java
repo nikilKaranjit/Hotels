@@ -66,5 +66,6 @@ public class SQLConstant {
 //CheckIn
     public final static String CHECKIN_GETALL =  " SELECT * FROM  " + TableConstant.TABLE_CHECKIN;
     public final static String CHECKIN_CHECKOUT= " INSERT INTO  " + TableConstant.TABLE_CHECKOUT + "(checkin_id,first_name,last_name,room_price,room_number,checkin_date,checkout_date,total_price ,total_nights) SELECT checkin_id,first_name,last_name,room_price,room_number, checkin_date, checkout_date,total_price ,total_nights From " + TableConstant.TABLE_CHECKIN + " where checkin_id=? " ;
-
+//Checkout
+    public final static String CHECKOUT_GETALL= "SELECT * FROM " + TableConstant.TABLE_CHECKOUT;
 }

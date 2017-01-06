@@ -36,7 +36,7 @@ public class CheckinController {
      @RequestMapping(value = "/checkout/{checkinId}", method = RequestMethod.GET)
     public ModelAndView checkout(@PathVariable("checkinId") int checkinId) throws SQLException {
         ModelAndView mv = new ModelAndView("admin/checkout/index");
-        mv.addObject("booking", checkinService.checkout(checkinId));
+        mv.addObject("Checkin", checkinService.checkout(checkinId));
         return mv;
     }
     
