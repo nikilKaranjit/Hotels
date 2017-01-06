@@ -13,8 +13,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -31,6 +33,13 @@ public class CheckinController {
         map.addAttribute("Checkin", checkinService.getALL());
         return "admin/checkin/index";
     }
+     @RequestMapping(value = "/checkout/{checkinId}", method = RequestMethod.GET)
+    public ModelAndView checkout(@PathVariable("checkinId") int checkinId) throws SQLException {
+        ModelAndView mv = new ModelAndView("admin/checkout/index");
+        mv.addObject("booking", checkinService.checkout(checkinId));
+        return mv;
+    }
+    
     @RequestMapping(method = RequestMethod.GET, value = "/logout")
     public String Logout(HttpServletRequest req, HttpServletResponse resp){
         HttpSession session = req.getSession(false);

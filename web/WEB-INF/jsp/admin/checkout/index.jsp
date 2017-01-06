@@ -16,21 +16,21 @@
             <td>Total Price</td>
             <td>Action</td>
             </tr>
-            <c:forEach var="checkin" items="${Checkin}">    
+            <c:forEach var="checkout" items="${Checkout}">    
                 <tr>
-                <td>${checkin.checkinId}</td>
-                <td>${checkin.getBooking().getFirstName()}</td>
-                <td>${checkin.getBooking().getLastName()}</td>
-                <td>${checkin.getBooking().getRoom().getRoomPrice()}</td>
-                <td>${checkin.getBooking().getRoom().getRoomNumber()}</td>
-                <td>${checkin.getBooking().getCheckinDate()}</td>
-                <td>${checkin.getBooking().getTotalNights()}</td>
-                <td>${checkin.getBooking().getCheckoutDate()}</td>
-                <td>${checkin.getBooking().getTotalPrice()}</td>
+                <td>${checkout.checkoutId}</td>
+                <td>${checkout.getCheckin().getFirstName()}</td>
+                <td>${checkout.getCheckin().getLastName()}</td>
+                <td>${checkout.getCheckin().getBooking().getRoom().getRoomPrice()}</td>
+                <td>${checkout.getCheckin().getBooking().getRoom().getRoomNumber()}</td>
+                <td>${checkout.getCheckin().getBooking().getCheckinDate()}</td>
+                <td>${checkout.getCheckin().getBooking().getTotalNights()}</td>
+                <td>${checkout.getCheckin().getBooking.getCheckoutDate()}</td>
+                <td>${checkout.getCheckin().getBooking().getTotalPrice()}</td>
                 <td>
                    </a>
                     <a href="${SITE_URL}/admin/checkin/checkout"  class="btn btn-success" onclick=" return confirm('Are you sure to checkout')">
-                        <span class="glyphicon glyphicon-tower"></span>
+                        <span class="glyphicon glyphicon-home"></span>
                     </a>
                     <a href="${SITE_URL}/admin/booking/delete/${booking.bId}" class="btn btn-danger"  onclick=" return confirm('Are you sure to Delete')">
                         <span class="glyphicon glyphicon-trash">Delete</span>

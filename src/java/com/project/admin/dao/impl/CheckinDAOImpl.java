@@ -56,5 +56,10 @@ public class CheckinDAOImpl implements CheckinDAO {
 
     }
 
+    @Override
+    public int checkout(int checkinId) throws SQLException {
+       return jdbcTemplate.update(SQLConstant.CHECKIN_CHECKOUT,new Object[]{checkinId});
+    }
+
     
 }

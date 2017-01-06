@@ -28,8 +28,9 @@
                 <td>${checkin.getBooking().getCheckoutDate()}</td>
                 <td>${checkin.getBooking().getTotalPrice()}</td>
                 <td>
-                    <a href="${SITE_URL}/admin/booking/edit/${booking.bId}" class="btn btn-success" >
-                        <span class="glyphicon glyphicon-pencil">Edit</span>
+                   </a>
+                    <a href="${SITE_URL}/admin/checkin/checkout"  class="btn btn-success" onclick=" return confirm('Are you sure to checkout')">
+                        <span class="glyphicon glyphicon-tower"></span>
                     </a>
                     <a href="${SITE_URL}/admin/booking/delete/${booking.bId}" class="btn btn-danger"  onclick=" return confirm('Are you sure to Delete')">
                         <span class="glyphicon glyphicon-trash">Delete</span>

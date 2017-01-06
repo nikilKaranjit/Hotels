@@ -48,10 +48,6 @@ public class BookingController {
         map.addAttribute("Booking", bookingService.getALL());
         return "admin/booking/index";
     }
- 
-
-    
-
     
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public ModelAndView add(HttpServletRequest request) throws SQLException {

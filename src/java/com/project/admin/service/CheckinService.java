@@ -15,5 +15,6 @@ import java.util.List;
  */
 public interface CheckinService {
     List<Checkin> getALL() throws SQLException;
+    int checkout(int checkinId) throws SQLException;
     
 }

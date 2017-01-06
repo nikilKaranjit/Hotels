@@ -17,5 +17,6 @@ public class TableConstant {
     public final static String TABLE_BOOKING= "tbl_booking"; 
     public final static String TABLE_COMMENTS= "tbl_comments";
     public final static String TABLE_CHECKIN="tbl_checkin";
+    public final static String TABLE_CHECKOUT="tbl_checkout";
             
 }

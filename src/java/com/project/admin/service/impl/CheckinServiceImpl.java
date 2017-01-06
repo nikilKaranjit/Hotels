@@ -27,5 +27,10 @@ public class CheckinServiceImpl implements CheckinService {
     public List<Checkin> getALL() throws SQLException {
         return checkinDAO.getALL();
     }
+
+    @Override
+    public int checkout(int checkinId) throws SQLException {
+        return checkinDAO.checkout(checkinId);
+    }
     
 }

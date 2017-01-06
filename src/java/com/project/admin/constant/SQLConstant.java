@@ -62,7 +62,9 @@ public class SQLConstant {
     public final static String COMMENTS_UPDATE = " UPDATE " + TableConstant.TABLE_COMMENTS + " SET message=? , customer=? WHERE comments_id=? ";
     public final static String COMMENTS_DELETE = " DELETE FROM " + TableConstant.TABLE_COMMENTS + " WHERE comments_id = ? ";
     public final static String COMMENTS_GETBYID = " SELECT * FROM " + TableConstant.TABLE_COMMENTS + " c join " + TableConstant.TABLE_CUSTOMER + " cu on c.c_id = cu.c_id WHERE comments_id=? ";
-    //CheckIn
-    public final static String CHECKIN_GETALL = "SELECT * FROM  " + TableConstant.TABLE_CHECKIN;
+    
+//CheckIn
+    public final static String CHECKIN_GETALL =  " SELECT * FROM  " + TableConstant.TABLE_CHECKIN;
+    public final static String CHECKIN_CHECKOUT= " INSERT INTO  " + TableConstant.TABLE_CHECKOUT + "(checkin_id,first_name,last_name,room_price,room_number,checkin_date,checkout_date,total_price ,total_nights) SELECT checkin_id,first_name,last_name,room_price,room_number, checkin_date, checkout_date,total_price ,total_nights From " + TableConstant.TABLE_CHECKIN + " where checkin_id=? " ;
 
 }
